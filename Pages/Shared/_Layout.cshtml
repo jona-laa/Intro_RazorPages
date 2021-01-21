@@ -20,29 +20,29 @@
             <span class="header-date">Dagens datum är: @todaysDate </span>
         </div>
     </header>
-    <div class="container">
-        <main class="pb-3">
-                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light mb-3">
-                    <div class="container">
-                        <a href="" onClick=event.preventDefault() id="main-menu-toggle" role="button" aria-label="Toggle Mobile Menu">
-                            <img src="~/images/menu.png" alt="Menu icon" class="menu-icon">
-                        </a>
+    <div class="page-container">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light mb-3">
+            <div class="container">
+                <a href="" onClick=event.preventDefault() id="main-menu-toggle" role="button" aria-label="Toggle Mobile Menu">
+                    <img src="~/images/menu.png" alt="Menu icon" class="menu-icon">
+                </a>
 
-                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                            <ul class="navbar-nav flex-grow-1">
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Index">Start</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Razor">Razor</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/About">Om Mig</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Start</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Razor">Razor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/About">Om Mig</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="pb-3">
             @RenderBody()
         </main>
     </div>
