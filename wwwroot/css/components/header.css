@@ -33,3 +33,13 @@ header a.brand {
 header a.brand img {
   width: 50px;
 }
+
+@media screen and (max-width: 500px) {
+  .brand span {
+    display: none;
+  }
+
+  .header-date {
+    font-size: 14px;
+  }
+}

@@ -1,13 +1,10 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
+﻿// Query selectors
 const mainMenu = document.querySelector('.navbar-collapse');
 const mainMenuToggle = document.querySelector('#main-menu-toggle');
 
 
 
-// Toggle mobile menu
+// Toggle mobile menu + change WAI-ARIA
 $('#main-menu-toggle').click(function () {
     $('.navbar-collapse').toggle(100);
 
@@ -22,14 +19,17 @@ $('#main-menu-toggle').click(function () {
 
 
 
-// Make sure aria attributes are still correct on resize
+// Correct WAI-ARIA on resize
 window.onresize = () => {
-    if (window.innerWidth < 812) {
+    if (window.innerWidth <= 812) {
+        mainMenu.style.display = 'none';
         mainMenu.setAttribute('aria-hidden', 'true');
         mainMenuToggle.setAttribute('aria-hidden', 'false');
+        mainMenuToggle.setAttribute('aria-expanded', 'false');
     } else {
         mainMenu.setAttribute('aria-hidden', 'false');
         mainMenuToggle.setAttribute('aria-hidden', 'true');
+        mainMenuToggle.setAttribute('aria-expanded', 'true');
     }
 }
 

@@ -9,30 +9,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RazorIntro - @ViewData["Title"]</title>
     <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
 </head>
 <body>
     <header>
         <div class="container">
-            <a class="brand" asp-area="" asp-page="/Index"><img src="~/images/KTLO.png" alt="Logotype"> KTLO</a>
-            <span>Dagens datum är: @todaysDate </span>
+            <a class="brand" asp-area="" asp-page="/Index"><img src="~/images/KTLO.png" alt="Logotype"> <span>KTLO</span></a>
+            <span class="header-date">Dagens datum är: @todaysDate </span>
         </div>
     </header>
     <div class="container">
         <main class="pb-3">
-            <aside>
-                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light mb-3">
                     <div class="container">
-                        @* <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button> *@
-                        <!-- Mobile meny - Hidden on default -->
                         <a href="" onClick=event.preventDefault() id="main-menu-toggle" role="button" aria-label="Toggle Mobile Menu">
-                            <svg viewBox="0 0 100 80" width="40" height="40">
-                                <rect width="90" height="10" fill="#f7f7f7"></rect>
-                                <rect y="30" width="90" height="10" fill="#f7f7f7"></rect>
-                                <rect y="60" width="90" height="10" fill="#f7f7f7"></rect>
-                            </svg>
+                            <img src="~/images/menu.png" alt="Menu icon" class="menu-icon">
                         </a>
 
                         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
@@ -50,19 +43,23 @@
                         </div>
                     </div>
                 </nav>
-            </aside>
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            <small>Av Jonathan Laasonen - Kontakta mig via e-post: <a href="mailto:jola1803@student.miun.se">jola1803@student.miun.se</a></small>
+    <footer class="border-top footer">
+        <div class="social">
+            <a href="https://github.com/jona-laa/" target="_blank" class="icon-link" aria-label="GitHub Link"><i class="fab fa-github fa-2x"></i></a>
+
+            <a href="https://www.linkedin.com/in/jonathan-laasonen-974aa617a/" target="_blank" class="icon-link" aria-label="LinkedIn Link"><i class="fab fa-linkedin fa-2x"></i></a> 
         </div>
+
+        <small>Av Jonathan Laasonen<br> Kontakta mig via <a href="mailto:jola1803@student.miun.se">jola1803@student.miun.se</a></small> 
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/puzzle.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

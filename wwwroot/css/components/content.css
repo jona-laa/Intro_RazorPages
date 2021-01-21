@@ -2,6 +2,16 @@
   padding: 10px 20px;
 }
 
+@media screen and (max-width: 812px) {
+  .page-content {
+    margin: auto;
+  }
+}
+
 .thicc {
   font-weight: 600;
+}
+
+.page-content p {
+  max-width: 600px;
 }

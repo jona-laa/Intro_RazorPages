@@ -6,6 +6,7 @@ for details on configuring this project to bundle and minify static web assets. 
 @import './components/navbar.css';
 @import './components/footer.css';
 @import './components/content.css';
+@import './components/puzzle.css';
 
 /* Provide sufficient contrast against white background */
 a {
@@ -28,14 +29,8 @@ a {
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Poppins', sans-serif;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
 }
 
 .border-top {
@@ -59,11 +54,16 @@ button.accept-policy {
 html {
   position: relative;
   min-height: 100%;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
+    ),
+    url('../images/wilderness.jpg') no-repeat center center/cover;
 }
 
 body {
   /* Margin bottom by footer height */
-  margin: 0;
+  margin: 0 0 150px;
   height: 100%;
 }
 
