@@ -15,3 +15,12 @@
 .page-content p {
   max-width: 600px;
 }
+
+.about figure {
+    max-width: 200px;
+    margin: 0;
+}
+
+.about figure img {
+    width: 100%;
+}
