@@ -17,10 +17,36 @@
 }
 
 .about figure {
-    max-width: 200px;
-    margin: 0;
+  max-width: 200px;
+  margin: 0;
 }
 
 .about figure img {
-    width: 100%;
+  width: 100%;
+}
+
+.page-content ul {
+  list-style-type: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0;
+}
+
+.page-content ul li {
+  list-style-position: inside;
+  margin-bottom: 1px;
+  display: flex;
+}
+
+.page-content .list-col-1 {
+  background: black;
+  color: white;
+  display: inline-block;
+  padding: 5px;
+  text-align: center;
+  width: 80px;
+}
+
+.page-content .list-col-2 {
+  display: inline-block;
+  padding: 5px;
 }
