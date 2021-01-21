@@ -1,0 +1,46 @@
+﻿@page
+@model RazorIntro.Pages.RazorModel
+@{
+    ViewData["Title"] = "Razor";
+
+    List<Course> courses = new List<Course>();
+        courses.Add(new Course() { code = "DT057G", name="Webbutveckling I"});
+        courses.Add(new Course() { code = "DT084G", name="Introduktion till programmering med JavaScript"});
+        courses.Add(new Course() { code = "DT163G", name="Digital bildbehandling för webb"});
+        courses.Add(new Course() { code = "GD008G", name="Typografi och form för webb"});
+        courses.Add(new Course() { code = "DT003G", name="Databaser"});
+        courses.Add(new Course() { code = "DT093G", name="Webbutveckling II"});
+        courses.Add(new Course() { code = "DT152G", name="Webbdesign för CMS"});
+        courses.Add(new Course() { code = "DT173G", name="Webbutveckling III"});
+        courses.Add(new Course() { code = "IK060G", name="Projektledning"});
+        courses.Add(new Course() { code = "DT068G", name="Webbanvändbarhet"});
+        courses.Add(new Course() { code = "DT071G", name="Programmering I C#.net"});
+}
+
+
+
+<div class="container page-content">
+    <h1>@ViewData["Title"]</h1>
+        <section class="razor">
+        <h2>Information</h2>
+        <p><span class="thicc">Datum/Klockslag:</span> @DateTime.Now.ToString("yyy-MM-dd hh:mm:ss")</p>
+
+        @if(DateTime.Now.DayOfWeek.ToString() == "Monday")
+        {
+            <p>Idag är det måndag.</p>
+        }
+        else
+        {
+            <p>Idag är det inte måndag.</p>
+        }
+
+        <h2>Kurser jag läst</h2>
+        
+        <ul>
+        @foreach (var course in courses){
+                       <li>@course.code, @course.name</li>
+                    }
+        </ul>
+        
+    </section>
+</div>

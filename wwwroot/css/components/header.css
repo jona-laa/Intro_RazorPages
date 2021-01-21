@@ -1,0 +1,35 @@
+header {
+  background: rgba(0, 0, 0, 0.75);
+  height: 100px;
+  display: flex;
+}
+
+header .container {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 100%;
+}
+
+header .container .brand img {
+  vertical-align: middle;
+}
+
+header .container .brand {
+  text-decoration: none;
+}
+
+header a.brand {
+  color: white;
+  white-space: normal;
+  word-break: break-all;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 10px;
+}
+
+header a.brand img {
+  width: 50px;
+}
